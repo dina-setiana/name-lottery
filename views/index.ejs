@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <main>
+      <section class="glass">
+        <div class="box">
+          <div class="title">
+            <h1>Random Roller </h1>
+            <form>
+              <input type="text" class="name-input" />
+              <button type="submit" class="add-btn">
+                <i class="fas fa-plus-square"></i>
+              </button>
+              <button type="button" class="random-btn">Random</button>
+              <button type="button" class="reset-btn">Reset</button>
+            </form>
+          </div>
+          <div class="cards">
+            <% for (let i=0; i < nameList.length; i++) { %>
+              <% if(nameList[i].status=="waiting" ) { %>
+                <div class="card">
+                  <h3 class="item">
+                    <%= nameList[i].name %>
+                  </h3>
+                  <button class="status"><i
+                      class="fas fa-hourglass-start"></i></button>
+                  <button class="trash-btn"><i
+                      class="fas fa-trash"></i></button>
+                </div>
+                <% } else { %>
+                  <div class="card completed">
+                    <h3 class="item">
+                      <%= nameList[i].name %>
+                    </h3>
+                    <button class="status"><i class="fas fa-check"></i></button>
+                    <button class="trash-btn"><i
+                        class="fas fa-trash"></i></button>
+                  </div>
+                  <% } %>
+                    <% } %>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
+    <script src="./randomizer.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background: #000000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
+h1 {
+  color: #426696;
+  font-weight: 600;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+h2,
+p {
+  color: #658ec6;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+h3 {
+  color: #426696;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+main {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  display: flex;
+  justify-content: center;
+}
+
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  top: 0%;
+  right: 15%;
+}
+.circle2 {
+  bottom: 0%;
+  left: 10%;
+}
+
+.glass {
+  background: white;
+  min-height: 80vh;
+  width: 60%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  display: flex;
+  margin: 1rem 0;
+}
+
+.box {
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 2;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.title form {
+  display: flex;
+  align-items: center;
+}
+
+.title input {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border: none;
+  width: 50%;
+  padding: 0.25rem;
+  height: 3rem;
+  font-size: 24px;
+}
+
+.title button {
+  color: #f7fffe;
+  background: #6cdbeb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  border: none;
+  height: 3rem;
+  padding: 0.5rem;
+}
+
+form button:hover {
+  color: #6cdbeb;
+  background: #f7fffe;
+}
+
+form .random-btn {
+  margin-left: 1rem;
+}
+
+form .reset-btn {
+  margin-left: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  --column: 3;
+  display: flex;
+  background:  rgba(255, 255, 255, 0.8);
+  margin: 0.5rem 0rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  flex: 0 0 calc(98% / var(--column));
+  transition: all 1s ease;
+}
+
+.card .item {
+  flex: 1;
+  align-self: center;
+  padding: 0.5rem;
+}
+
+.card .status,
+.card .trash-btn {
+  background: #6cdbeb;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  min-width: 50px;
+  text-align: center;
+}
+
+.card .trash-btn {
+  background: #eb6c6c;
+  cursor: pointer;
+}
+
+.fa-trash {
+  pointer-events: none;
+}
+
+.drop {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  opacity: 0.5;
+}
+
+.selecting {
+  background-color:  #6cdbeb;
+  transition: none;
+  opacity: 0.8;
+}
+
+.selecting > h3 {
+  font-weight: 600;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.disabled:hover {
+  background: #6cdbeb !important;
+  color: #ffffff !important;
+  cursor: context-menu;
+}
